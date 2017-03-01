@@ -51,13 +51,16 @@ function checkInput(event) {
     console.log(input);
   }
 }
-function randomPosition() {
-  return Math.floor(Math.random() * 600)
+function randomVerticalPosition() {
+  return Math.floor(Math.random() * 400)
+}
+function randomHorizontalPosition() {
+  return Math.floor(Math.random() * 800)
 }
 function explode1() {
   $('div').css({
-    "bottom" : randomPosition() + 'px',
-    "left" : randomPosition() + 'px',
+    "bottom" : randomVerticalPosition() + 'px',
+    "left" : randomHorizontalPosition() + 'px',
   });
   $('div').addClass('show-e1');
 }
@@ -73,16 +76,24 @@ function explode4() {
 function explode5() {
   $('div').addClass('show-e5');
 }
+function explode6() {
+  $('div').addClass('show-e6');
+}
+function explode7() {
+  $('div').addClass('show-e7');
+}
 function hideExplosion() {
-  $('div').removeClass('show-e1 show-e2 show-e3 show-e4 show-e5');
+  $('div').removeClass('show-e1 show-e2 show-e3 show-e4 show-e5 show-e6 show-e7');
 }
 function makeExplosion() {
   setTimeout(explode1, 0)
   setTimeout(explode2, 100)
   setTimeout(explode3, 200)
   setTimeout(explode4, 300)
-  setTimeout(explode4, 400)
-  setTimeout(hideExplosion, 500)
+  setTimeout(explode5, 400)
+  setTimeout(explode6, 500)
+  setTimeout(explode7, 600)
+  setTimeout(hideExplosion, 700)
 }
 
 function populateQuestion() {
