@@ -85,3 +85,31 @@ input:focus {
   animation-iteration-count: infinite;  
   animation-duration: 1s; 
 }	
+.hide-explosion {
+  opacity: 0;
+}
+.show-e1 {
+  position: relative;
+  opacity: 1;
+  width: 190px;
+  height: 200px;
+  background: transparent url("../images/explosion.png") 0 0 no-repeat;
+}
+.show-e2 {
+  background-position: -185px 0;
+}
+.show-e3 {
+  background-position: -390px 0;
+}
+.show-e4 {
+  background-position: -575px 0;
+}
+.show-e5 {
+  background-position: -760px 0;
+}
+.show-e6 {
+  background-position: 0 -185px;
+}
+.show-e7 {
+  background-position: -185px -185px;
+}

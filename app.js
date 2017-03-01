@@ -1,6 +1,8 @@
 const fs = require('fs');
 const http = require('http');
 
+const tasks = JSON.parse(fs.readFileSync('game_data.txt'));
+
 let server = http.createServer(function(req, res) {
   switch (req.url) {
     case '/':
@@ -15,8 +17,8 @@ let server = http.createServer(function(req, res) {
     case '/css/style.css':
       serveCSS(res);
       break;
-    case '/images/trash-can.png':
-      serveTrashImage(res);
+    case '/images/explosion.png':
+      serveBombImage(res);
       break;
     default: 
       pageNotFound(res);
@@ -52,8 +54,8 @@ function serveCSS(res) {
   });
 }
 
-function serveTrashImage(res) {
-  fs.readFile('static/images/trash-can.png', (err, data) => {
+function serveBombImage(res) {
+  fs.readFile('static/images/explosion.png', (err, data) => {
     if (err) console.log("couldn't read trash can image");
     res.end(data);
   });
@@ -65,5 +67,5 @@ function pageNotFound(res) {
 }
 
 
-server.listen(8000, () => console.log('running on 8000'));
+server.listen(5000, () => console.log('running on 5000'));
 
