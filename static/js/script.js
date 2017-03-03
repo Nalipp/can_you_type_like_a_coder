@@ -1,6 +1,4 @@
 let beginnerMode = ["this is the first", "this is the second", "this is the third"] 
-// let hellMode = ["var = 4 * 9", "5 % 2 !== 8", "regex = \\[^abc]\\"]
-// let mode = beginnerMode;
 let userAnswers = [];
 let v = 0;
 
